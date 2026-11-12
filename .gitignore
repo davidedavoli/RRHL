@@ -1,0 +1,4 @@
+# Lake directory: build artifacts (.olean/.c/.o), downloaded packages, and config cache
+.lake/
+# macOS metadata
+.DS_Store
