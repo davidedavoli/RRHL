@@ -6,7 +6,7 @@ import Xhl.Divergence.Tensor
 
 For `𝒩(μ, vI_d)` as the product `Measure.pi` of `d` scalar Gaussians, tensorization
 (`hellingerIntegral_pi`) and `hellingerIntegral_gaussianReal` give
-`exp(r(r-1)‖μ₁ − μ₂‖²/(2v))` (Proposition A.25, item 1).
+`exp(r(r-1)‖μ₁ − μ₂‖²/(2v))` (Proposition A.24, item 1).
 -/
 
 open MeasureTheory ProbabilityTheory ENNReal Real

@@ -5,7 +5,7 @@ import Xhl.Examples.Filter.Support
 open Continuous
 
 /-!
-# Noisy gradient descent with per-record Rényi filters: the derivation (§5.2, Appendix D.3)
+# Noisy gradient descent with per-record Rényi filters: the derivation (§5.2, Appendix E.3)
 
 `filter_gen_deriv` derives judgment (10) for `filterGen` in `TDeriv`: **[Assn]** for the
 assignments, **[While]** (as the budget chain `TDeriv.whileInv`) for the record loop at the

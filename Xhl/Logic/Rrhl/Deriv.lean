@@ -160,7 +160,7 @@ inductive TDeriv (α : ℝ) :
       {P Q : St M × St M → Prop} {φ ψ : St M × St M → ℝ≥0∞} {c₁ c₂ : Cmd ident M}
       (d : TDeriv α P φ c₁ c₂ Q ψ) :
       TDeriv α P (fun s => c * φ s) c₁ c₂ Q (fun s => c * ψ s)
-  /-- **[Equiv]** (`rrhl_equiv`): programs derivably equivalent (`CEquiv`, Appendix E) on
+  /-- **[Equiv]** (`rrhl_equiv`): programs derivably equivalent (`CEquiv`, Appendix C) on
       restrictions `R₁`, `R₂` that the precondition entails (`hP`) are interchangeable. -/
   | equiv {P Q : St M × St M → Prop} {φ ψ : St M × St M → ℝ≥0∞}
       {c₁ c₂ c₁' c₂' : Cmd ident M} {R₁ R₂ : St M → Prop}
@@ -307,7 +307,7 @@ theorem TDeriv.rndGap {α : ℝ} (hα : 1 < α) {d : ℕ} (x₁ x₂ : Vars iden
   TDeriv.rndLift x₁ x₂ κ₁ κ₂ P Q φ ψ
     (rrhl_rnd_gap hα x₁ x₂ κ₁ κ₂ δ P Q φ ψ hQhold hdiv)
 
-/-- **[Samp-Dec]** (`rrhl_rnd_fwdK_ae`, Figure 9): the right sampler decomposes as
+/-- **[Samp-Dec]** (`rrhl_rnd_fwdK_ae`, Figure 11): the right sampler decomposes as
     `dlet v ← ν in F v` with `F` Markov; the pre-budget pays the weighted Hellinger
     integral between the left sampler and `ν`. -/
 theorem TDeriv.rndFwdK {α : ℝ} (hα : 1 < α) {t₁ t₂ : Ty}

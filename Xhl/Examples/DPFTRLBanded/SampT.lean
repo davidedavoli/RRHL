@@ -4,7 +4,7 @@ import Xhl.Examples.DPFTRLBanded.PresampleT
 open Continuous
 
 /-!
-# The paying leaf, the presampled window, and [Equiv] (Appendix D.5, (53)–(58))
+# The paying leaf, the presampled window, and [Equiv] (Appendix E.5, (53)–(58))
 
 * **[Samp-Dec]** (`tderiv_sampWT`) on the draw `w ←$ Bern(q) ⊗ 𝒩(0, σ²I)^{m+1}`, with the
   witnesses `sampFwdK_mix_witness` (record `j` absent on the right, price `Υ_α`) and

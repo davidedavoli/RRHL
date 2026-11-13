@@ -4,7 +4,7 @@ import Xhl.Divergence.TestVal
 # The witness-free Rényi lifting (lifting level)
 
 Definitions at the level of one pair of measures, independent of the program syntax.
-The two-witness reading is the judgment `WRhl` (`Xhl/Logic/Rrhl/Duality.lean`, Appendix C).
+The two-witness reading is the judgment `WRhl` (`Xhl/Logic/Rrhl/Duality.lean`, Appendix D).
 
 * `CodLiftMulC` — the witness-free lifting: for every pair of measurable tests
   `k₁ : A → ℝ≥0∞`, `k₂ : B → ℝ≥0∞` with `k₁ a ^ α * k₂ b ^ (1 − α) ≤ 1` on the

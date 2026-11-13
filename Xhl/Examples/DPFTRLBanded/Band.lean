@@ -6,7 +6,7 @@ open Continuous
 # The banded record step: a Bernoulli coin per eligible record
 
 Record `i` is eligible at round `t` when `elig(i, t)` holds, and an eligible record takes
-part with probability `q`, tossing its own coin (the block Pois of Fig. 8):
+part with probability `q`, tossing its own coin (the block Pois of Fig. 10):
 
     while i < n do
       if elig(i, t) then local u in (u ←$ Bern(q) ; acc := acc + u·clip_Γ(∇ℓ(x, D[i])))

@@ -2,7 +2,7 @@ import Xhl.Examples.DPSGD.Transcript.Deriv
 import Xhl.Divergence.Privacy
 
 /-!
-# RDP and (ε,δ) guarantees for DP-SGD in the transcript model (Corollary D.3)
+# RDP and (ε,δ) guarantees for DP-SGD in the transcript model (Corollary E.3)
 
 From `dpsgdTranscript_deriv`: individual RDP (Proposition 4.4), RDP at the union of the
 adjacencies (Lemma 3.7), and `(ε,δ)`-DP (Proposition 3.5) at
@@ -25,7 +25,7 @@ variable (N dx d T : ℕ)
 /-- **The transcript mechanism is individually RDP** (Def 3.6) for the family
     `AdjAtSym (recBotN N dx) j`, at level `T·log Υ_α/(α−1)`: Proposition 4.4
     (`rrhl_indivRenyiDP`) on `dpsgdTranscript_deriv`, with `max(Υ_α, Λ_α) = Υ_α` by
-    Lemma D.1. -/
+    Lemma E.1. -/
 theorem dpsgdTranscript_IndivRDP {α : ℝ} (hα : 1 < α)
     (θ₀ : EuclideanSpace ℝ (Fin d)) (hm : MeasOK dx d grad)
     (hC : 0 < (C : ℝ))
@@ -63,7 +63,7 @@ theorem dpsgdTranscript_RDP {α : ℝ} (hα : 1 < α)
     (dpsgdTranscript_IndivRDP N dx d T grad C η σ q hα θ₀ hm hC hq1
       hσC).renyiDP_iSup (Set.finite_range _).bddAbove
 
-/-- **Corollary D.3**: the transcript mechanism is `(ε,δ)`-DP at the union of the
+/-- **Corollary E.3**: the transcript mechanism is `(ε,δ)`-DP at the union of the
     adjacencies, by Proposition 3.5 (`RenyiDP.epsilonDeltaDP`) on `dpsgdTranscript_RDP`. -/
 theorem dpsgdTranscript_DP {α : ℝ} (hα : 1 < α)
     (θ₀ : EuclideanSpace ℝ (Fin d)) (hm : MeasOK dx d grad)

@@ -5,9 +5,9 @@ import Xhl.Divergence.Privacy
 open Continuous
 
 /-!
-# Amplified banded DP-FTRL, as a derivation (Appendix D.5)
+# Amplified banded DP-FTRL, as a derivation (Appendix E.5)
 
-`dpftrlBandedGen` (Fig. 8) derived in `TDeriv`, the judgment (44), for any banded
+`dpftrlBandedGen` (Fig. 10) derived in `TDeriv`, the judgment (44), for any banded
 eligibility (`BandElig`): the rounds `P_j = {t < T | elig j t}` of record `j` are
 `(m+1)`-min-separated, so the windows of `m + 1` rounds they open do not overlap; the last
 may be truncated by the end of the run.
@@ -356,7 +356,7 @@ lemma exists_enum (S : Finset ℕ) :
   · exact h
   · exact absurd hab (ne_of_gt (hmono b a h ha))
 
-/-- **The program, derived** (the judgment (44) of Appendix D.5).  Record `j`'s
+/-- **The program, derived** (the judgment (44) of Appendix E.5).  Record `j`'s
     eligibility is banded (`BandElig`) and the encoder is banded (`C[r,s] ≠ 0 → r ≤ s + m`);
     from datasets adjacent at `j` in either order, the budget is one factor
     `blockSymBudgetM` per round of `P_j`. -/

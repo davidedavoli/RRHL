@@ -3,7 +3,7 @@ import Xhl.Divergence.SubsamplingFlip
 import Xhl.Divergence.SubsamplingMixBudget
 
 /-!
-# Domination of the reversed order (Lemma D.1)
+# Domination of the reversed order (Lemma E.1)
 
 `mixFlipBudgetE_le_forward`: for every real `α > 1` and `q ≤ 1`,
 
@@ -231,7 +231,7 @@ lemma mixture_rpow_ofReal {q : ℝ≥0} (hq : (q:ℝ) ≤ 1) {y : ℝ} (hy : 0 <
   rw [← e1, ← e2, ← ENNReal.ofReal_add (by linarith) (mul_nonneg hqR hy.le),
     ENNReal.ofReal_rpow_of_pos (mixture_base_pos hqR hq hy)]
 
-/-- **Domination of the reversed order** (Lemma D.1; Mironov et al., Corollary 7): `Λ_α ≤ Υ_α`, at every
+/-- **Domination of the reversed order** (Lemma E.1; Mironov et al., Corollary 7): `Λ_α ≤ Υ_α`, at every
     real `α > 1` and `q ≤ 1`. -/
 theorem mixFlipBudgetE_le_forward {α : ℝ} (hα : 1 < α) {q : ℝ≥0} (hq : (q:ℝ) ≤ 1) {v : ℝ≥0}
     (hv : v ≠ 0) (s : ℝ) :

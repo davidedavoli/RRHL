@@ -7,7 +7,7 @@ import Mathlib.MeasureTheory.Measure.Portmanteau
 /-!
 # A limit of approximate left witnesses
 
-Used by the strong duality theorem (Theorem C.1).  Let `W i` be finite measures
+Used by the strong duality theorem (Theorem D.1).  Let `W i` be finite measures
 on `A × B` (Polish spaces), indexed along a non-trivial filter, all with left
 marginal `μ₁` and right-marginal budget `hellingerIntegral α ((W i).map snd) μ₂ ≤ η < ⊤`,
 and eventually vanishing outside each member of a sequence of closed sets whose

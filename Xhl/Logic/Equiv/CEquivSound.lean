@@ -10,8 +10,8 @@ open Continuous
 # Semantic lemmas behind the equivalence calculus
 
 The side-condition vocabulary of `CEquiv` (`setY`, `ExprIndep`, `IndepY`, `NoWriteL`) and
-one `osemA` identity per equation and closure rule of Appendix E, which `CEquiv.sound`
-(Theorem E.1, `Xhl/Logic/Equiv/CEquiv.lean`) assembles.  The frame law `osemA_setY` is the
+one `osemA` identity per equation and closure rule of Appendix C, which `CEquiv.sound`
+(Theorem C.1, `Xhl/Logic/Equiv/CEquiv.lean`) assembles.  The frame law `osemA_setY` is the
 basic independence fact; [E-Defer] (`osemA_defer`) and [E-Defer-C] (`osemA_defer_cond`) are
 the identities with probabilistic content.
 -/

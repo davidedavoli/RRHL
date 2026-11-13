@@ -8,7 +8,7 @@ open Continuous
 The binary-tree mechanism (Kairouz et al.) releases one Gaussian per node of the depth-`k`
 tree, centred at the gradient sum over the node's dyadic interval.  A leaf lies in exactly
 `k + 1` node intervals (`tree_path_count`), which gives the column norm of the tree encoder
-(`colNormSq_tree`, `Support.lean`) used in the comparison of Appendix D.4.
+(`colNormSq_tree`, `Support.lean`) used in the comparison of Appendix E.4.
 
 Node `(ℓ, j)`, with `ℓ ≤ k` and `j < 2^{k−ℓ}`, covers `[j·2^ℓ, (j+1)·2^ℓ)`.
 -/

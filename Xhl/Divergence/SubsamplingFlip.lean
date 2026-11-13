@@ -6,11 +6,11 @@ import Xhl.Divergence.SubsamplingRealOrderE
   `Λ_α(q, s, v) = H_α(𝒩(0,v) ‖ (1-q)·𝒩(0,v) + q·𝒩(s,v))`   (`mixFlipBudgetE`),
 
 the cost of a subsampled Gaussian step when the differing record is absent on the left
-(§5.1.1, Appendix D.1). As for `Υ_α`: the mixture identity
+(§5.1.1, Appendix E.1). As for `Υ_α`: the mixture identity
 (`hellingerIntegral_flip_mixture_real_lintegral`, integrand `((1-q)+q·L)^{1-α}`, bounded by
 `(1-q)^{1-α}`), monotonicity in `|Δ|` by convex order (`hellingerIntegral_flip_sgMixture_real_mono`),
 and the reduction of the vector case to the scalar one
-(`hellingerIntegral_flip_sgMixtureE_le_budget_of_le`). Lemma D.1 bounds it by `Υ_α`
+(`hellingerIntegral_flip_sgMixtureE_le_budget_of_le`). Lemma E.1 bounds it by `Υ_α`
 (`SubsamplingDomination.lean`).
 -/
 

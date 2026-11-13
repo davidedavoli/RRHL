@@ -38,7 +38,7 @@ import Xhl.Examples.DPFTRLBanded.Instance
 #print axioms Continuous.rrhl_tr_hellingerIntegral_le
 #print axioms Continuous.rrhl_renyiDP
 #print axioms Continuous.rrhl_indivRenyiDP
--- Appendix C: strong duality; Appendix D: the equivalence calculus
+-- Appendix C: the equivalence calculus; Appendix D: strong duality
 #print axioms Continuous.wrhl_of_rrhl_polish
 #print axioms Continuous.rrhl_iff_wrhl_polish
 #print axioms Continuous.CEquiv.sound

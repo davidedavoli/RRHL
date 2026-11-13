@@ -4,11 +4,11 @@ import Xhl.Examples.DPFTRLMatrix.ReleasePrograms
 open Continuous
 
 /-!
-# Amplified banded DP-FTRL (Appendix D.5): shared facts
+# Amplified banded DP-FTRL (Appendix E.5): shared facts
 
 The banded study reuses the matrix-mechanism study's parameters `DPFTRL.TParams`, side
 conditions `DPFTRL.TOK` and round tail (`Y[t] := (C·H)_t + z`, `θ := −(1/λ)·(B·Y)_t`,
-release `θ`, as in Fig. 8), at the symmetric adjacency `AdjAtSym`.  The schedule field
+release `θ`, as in Fig. 10), at the symmetric adjacency `AdjAtSym`.  The schedule field
 `part` of the record is not read: the coins decide participation.
 
 Contents: the `⊥`-record fact `clipV_grad_none`, the linear-algebra core

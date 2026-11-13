@@ -3,7 +3,7 @@ import Xhl.Examples.DPFTRLBanded.Window
 open Continuous
 
 /-!
-# The invariants of `dpftrlBandedGen` (Appendix D.5)
+# The invariants of `dpftrlBandedGen` (Appendix E.5)
 
 Every quantity is read off the two states.
 

@@ -3,7 +3,7 @@ import Xhl.Examples.DPSGD.Shared.Equiv.BlockCEquiv
 /-!
 # The split program of a paying round (last-iterate model)
 
-A paying round of the last-iterate study (§5.1.3, Appendix D.2) is derived by **[Equiv]**
+A paying round of the last-iterate study (§5.1.3, Appendix E.2) is derived by **[Equiv]**
 onto the split program `splitPrefix` (variances `σ₁`, `σ₂`, block variance `σ₂ + σ₁`)
 
     B ←$ ν_B ;  z ←$ (1−q)·𝒩(0, σ₂) + q·𝒩(u, σ₂) ;  g̃ ←$ 𝒩(g(B ∖ {i}) + z, σ₁)

@@ -3,7 +3,7 @@ import Xhl.Examples.DPFTRLBanded.Sched
 open Continuous
 
 /-!
-# Amplified banded DP-FTRL, one release per round — the program (Fig. 8)
+# Amplified banded DP-FTRL, one release per round — the program (Fig. 10)
 
 `R = T`: row `t` is released at round `t`.  One round is
 

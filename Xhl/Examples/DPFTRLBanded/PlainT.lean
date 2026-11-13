@@ -4,7 +4,7 @@ import Xhl.Logic.Rrhl.DerivedRules
 open Continuous
 
 /-!
-# The rounds outside every window (Appendix D.5, (52), (54))
+# The rounds outside every window (Appendix E.5, (52), (54))
 
 Between windows the histories differ on dead slots but agree on every slot alive or still
 to be written (`HAgrK`).  So the record loop adds equal contributions, the release reads

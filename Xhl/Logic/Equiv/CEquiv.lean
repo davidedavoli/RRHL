@@ -5,9 +5,9 @@ open Continuous
 /-!
 # `CEquiv` — derivable program equivalence
 
-The program equivalence calculus of Appendix E (Figures 10–11).  `CEquiv R c c'` is the
-judgment `⊢ c ≡_R c'`: one constructor per equation of Figure 10 and per closure rule of
-Figure 11.  `CEquiv.sound` (Theorem E.1) turns it into the semantic equality
+The program equivalence calculus of Appendix C (Figures 8–9).  `CEquiv R c c'` is the
+judgment `⊢ c ≡_R c'`: one constructor per equation of Figure 8 and per closure rule of
+Figure 9.  `CEquiv.sound` (Theorem C.1) turns it into the semantic equality
 `∀ s, R s → osemA c s = osemA c' s` that **[Equiv]** (`TDeriv.equiv`) consumes.
 
 The index `R` is the restriction (the states the precondition allows); [E-If-F], [E-Idle],
@@ -216,7 +216,7 @@ inductive CEquiv : (St M → Prop) → Cmd ident M → Cmd ident M → Prop wher
 @[inherit_doc CEquiv]
 scoped notation:40 c " ≋{" R "} " c' => CEquiv R c c'
 
-/-- **Theorem E.1 (soundness of the equivalence calculus)**: a derivable equivalence is an
+/-- **Theorem C.1 (soundness of the equivalence calculus)**: a derivable equivalence is an
     equality of the two programs' semantics on the states its restriction allows. -/
 theorem CEquiv.sound {R : St M → Prop} {c c' : Cmd ident M} (h : CEquiv R c c') :
     ∀ s : St M, R s → osemA c s = osemA c' s := by
@@ -435,7 +435,7 @@ theorem CEquiv.drawAssignReset {tb t : Ty} (b : Vars ident tb)
   (CEquiv.locDrawAssign b x κ hκb e).symm.trans
     (CEquiv.pushGen b x hxb κ e κ' hκ')
 
-/-- **[E-Cond-W]** as displayed in Figure 10, with the expression `if b then e else x`. -/
+/-- **[E-Cond-W]** as displayed in Figure 8, with the expression `if b then e else x`. -/
 theorem CEquiv.condAssignExpr {t : Ty} (x : Vars ident t) {R : St M → Prop}
     (b : BExpr M) (e : Expr M t) :
     CEquiv R (Cmd.cond b (Cmd.assign x e) Cmd.skip)

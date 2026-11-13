@@ -7,7 +7,7 @@ open Continuous
 # Slot lifetimes and block budgets of amplified banded DP-FTRL
 
 * `lastB C s` — the last row reading slot `s` (row `r` is released at round `r`);
-* `colSq C s m = ∑_{k<m+1, s+k<T} C[s+k, s]²` — the paper's `c_s²` (Appendix D.5) at
+* `colSq C s m = ∑_{k<m+1, s+k<T} C[s+k, s]²` — the paper's `c_s²` (Appendix E.5) at
   `b = m + 1`, truncated at the end of the run;
 * `blockSymBudgetM` — the block budget `max(Υ, Λ)` of the symmetric adjacency, equal to
   `Υ` by `blockSymBudgetM_eq`;
@@ -99,7 +99,7 @@ noncomputable def blockSymBudgetM (p : TParams d e n T T τ) (q : ℝ≥0) (α :
   max (mixBudgetR q (p.Cl * Real.sqrt (colSq p.C s m)) p.σ2 α)
     (mixFlipBudgetE q (p.Cl * Real.sqrt (colSq p.C s m)) p.σ2 α)
 
-/-- **Mironov–Talwar–Zhang** (Lemma D.1): the reversed leaf is dominated by the forward
+/-- **Mironov–Talwar–Zhang** (Lemma E.1): the reversed leaf is dominated by the forward
     one, so the symmetric block budget is `Υ_α`, at every `q ≤ 1`. -/
 theorem blockSymBudgetM_eq {α : ℝ} (hα : 1 < α) {p : TParams d e n T T τ} (hσ : p.σ2 ≠ 0)
     (hq : q ≤ 1) (m s : ℕ) :

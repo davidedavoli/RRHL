@@ -4,10 +4,10 @@ import Xhl.Measures.Erf
 /-!
 # The subsampled-Gaussian budget `Υ_α`
 
-`mixBudgetR q s v α = Υ_α(q, s, v)` (paper eq. (2)), defined as a Hellinger integral and
+`mixBudgetR q s v α = Υ_α(q, s, v)` (paper eq. (3)), defined as a Hellinger integral and
 monotone in `s` for every `q ≤ 1`. On `0 < q < 1`, `0 < s` it is evaluated in closed form
 (`mixBudgetR_eq_closedForm`, `mixBudgetR_eq_phiForm`, `mixBudgetR_eq_erfcForm`;
-Proposition D.2).
+Proposition E.2).
 -/
 
 open MeasureTheory ProbabilityTheory ENNReal Set
@@ -19,7 +19,7 @@ variable {d : ℕ}
 
 /-! ## The budget, for every `q ≤ 1` -/
 
-/-- **`Υ_α(q, s, v)`** (paper eq. (2)): the Hellinger integral of
+/-- **`Υ_α(q, s, v)`** (paper eq. (3)): the Hellinger integral of
     `(1−q)·𝒩(0,v) + q·𝒩(s,v)` against `𝒩(0,v)`. -/
 noncomputable def mixBudgetR (q : ℝ≥0) (s : ℝ) (v : ℝ≥0) (α : ℝ) : ℝ≥0∞ :=
   hellingerIntegral α ((1 - (q : ℝ≥0∞)) • gaussianReal (0 : ℝ) v + (q : ℝ≥0∞) • gaussianReal s v)
@@ -32,7 +32,7 @@ lemma mixBudgetR_zero {α : ℝ} (hα : 1 < α) (v : ℝ≥0) {q : ℝ≥0} (hq 
   rw [mixBudgetR, ← add_smul, tsub_add_cancel_of_le hqE, one_smul, hellingerIntegral_self_prob]
 
 /-- **Monotonicity of `Υ_α` in the sensitivity**, for every `q ≤ 1`
-    (Proposition A.25, item 2). -/
+    (Proposition A.24, item 2). -/
 theorem mixBudgetR_mono {α : ℝ} (hα : 1 < α) {v : ℝ≥0} (hv : v ≠ 0) {q : ℝ≥0}
     (hq : (q : ℝ) ≤ 1) {s t : ℝ} (hst : |s| ≤ |t|) :
     mixBudgetR q s v α ≤ mixBudgetR q t v α := by
@@ -88,7 +88,7 @@ theorem hellingerIntegral_sgMixtureE_le_mixBudgetR {α : ℝ} (hα : 1 < α) (u 
     exact mixBudgetR_mono hα hv hqR
       (by rw [abs_of_nonneg (norm_nonneg Δ), abs_of_nonneg hs]; exact hΔ)
 
-/-! ## Evaluating the budget: the closed form (Proposition D.2) -/
+/-! ## Evaluating the budget: the closed form (Proposition E.2) -/
 
 /-- **The budget in closed form**, for `0 < q < 1` and `0 < s`: the two binomial series
     of Mironov et al.'s §3.3 accountant, split at `z₁`. -/
@@ -104,7 +104,7 @@ theorem mixBudgetR_eq_closedForm {α : ℝ} (hα : 1 < α) {q : ℝ≥0} (hq0 : 
   rw [mixBudgetR]
   simpa using hellingerIntegral_sgMixture_real_closedForm_unconditional (μ₀ := 0) hα hs hv hq0 hq1
 
-/-- **The budget, `Φ` form** (Proposition D.2): each truncated likelihood-ratio moment of
+/-- **The budget, `Φ` form** (Proposition E.2): each truncated likelihood-ratio moment of
 `mixBudgetR_eq_closedForm` as `exp(β(β−1)s²/2v)` times the Gaussian measure of a half-line. -/
 theorem mixBudgetR_eq_phiForm {α : ℝ} (hα : 1 < α) {q : ℝ≥0} (hq0 : 0 < q)
     (hq1 : (q : ℝ) < 1) {s : ℝ} (hs : 0 < s) {v : ℝ≥0} (hv : v ≠ 0) :
@@ -124,7 +124,7 @@ theorem mixBudgetR_eq_phiForm {α : ℝ} (hα : 1 < α) {q : ℝ≥0} (hq0 : 0 <
   · exact tsum_congr fun n => by
       rw [integral_gaussLR_rpow_eq hv (α - (n : ℝ)) measurableSet_Ioi, zero_add]
 
-/-- **The budget, `erfc` form** (Proposition D.2): `mixBudgetR_eq_phiForm` with each
+/-- **The budget, `erfc` form** (Proposition E.2): `mixBudgetR_eq_phiForm` with each
 Gaussian half-line mass written via `erfc`, as evaluated by deployed accountants. -/
 theorem mixBudgetR_eq_erfcForm {α : ℝ} (hα : 1 < α) {q : ℝ≥0} (hq0 : 0 < q)
     (hq1 : (q : ℝ) < 1) {s : ℝ} (hs : 0 < s) {v : ℝ≥0} (hv : v ≠ 0) :

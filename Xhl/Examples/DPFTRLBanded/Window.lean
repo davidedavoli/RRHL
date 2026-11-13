@@ -7,7 +7,7 @@ open Continuous
 /-!
 # The window of `dpftrlBandedGen`, presampled into one variable
 
-A window (the paper's block, Appendix D.5) is `L + 1 ≤ m + 1` rounds: fewer than `m + 1`
+A window (the paper's block, Appendix E.5) is `L + 1 ≤ m + 1` rounds: fewer than `m + 1`
 when the end of the run truncates it.  The amplified bound needs the coin of record `j`
 at the window's first round and the window's noises in one joint draw `w` (the draw (45)),
 held in the state.  This file defines

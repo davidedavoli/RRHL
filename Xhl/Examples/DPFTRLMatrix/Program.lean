@@ -16,7 +16,7 @@ invariant `IT`.
 The row gaps `relGap p j r = ∑_s |C_{r,s}|·|part(j,s)|·Γ` bound the sensitivity `sens_j`
 (`sensSq_le_relGap`, `Potential.lean`); their closed forms for single participation
 (`sum_relGap_sq_singleton`) and banded encoders on separated patterns (`sum_relGap_sq_banded`)
-are the two claims of Proposition D.5.
+are the two claims of Proposition E.5.
 -/
 
 open MeasureTheory ProbabilityTheory ENNReal Real
@@ -300,7 +300,7 @@ lemma relGap_eq_sum_abs {j : ℕ} (pat : Finset (Fin T))
         rw [Finset.mem_filter] at hs; rw [hpart s, if_neg hs.2]; simp
   rw [h1, h2, add_zero]
 
-/-- **Proposition D.5 (1)**: for a single participation at `s₀` the squared gaps sum to
+/-- **Proposition E.5 (1)**: for a single participation at `s₀` the squared gaps sum to
     `Γ²‖C_{·,s₀}‖²`, for every encoder `C` (no sign condition). -/
 theorem sum_relGap_sq_singleton {j : ℕ} (s₀ : Fin T)
     (hpart : ∀ s : Fin T, p.part j s = if s = s₀ then 1 else 0) :
@@ -320,7 +320,7 @@ def RowBanded (C : Fin R → Fin T → ℝ) (b : ℕ) : Prop :=
   ∀ (r : Fin R) (s s' : Fin T), C r s ≠ 0 → C r s' ≠ 0 →
     |((s : ℕ) : ℤ) - ((s' : ℕ) : ℤ)| < (b : ℤ)
 
-/-- **Proposition D.5 (2)**: for a row-banded encoder and a `b`-separated participation
+/-- **Proposition E.5 (2)**: for a row-banded encoder and a `b`-separated participation
     pattern the squared gaps sum to `Γ² ∑_{s ∈ pat} ‖C_{·,s}‖²`, with no sign condition on `C`
     (each row meets the pattern in at most one column). -/
 theorem sum_relGap_sq_banded {j b : ℕ} (pat : Finset (Fin T))

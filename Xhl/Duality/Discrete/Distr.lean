@@ -13,7 +13,7 @@ namespace DStd
 
 `Distr α`: a mass function `α → ℝ≥0∞` with sum at most 1, and its marginals.  The discrete
 development in namespace `DStd` supports the discrete duality theorem
-(`Xhl/Duality/Discrete/RenyiDualityGen.lean`), the first step of Theorem C.1.
+(`Xhl/Duality/Discrete/RenyiDualityGen.lean`), the first step of Theorem D.1.
 -/
 
 open ENNReal OmegaCompletePartialOrder Classical

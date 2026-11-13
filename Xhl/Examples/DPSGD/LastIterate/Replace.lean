@@ -3,7 +3,7 @@ import Xhl.Divergence.WeakTriangle
 import Xhl.Divergence.SubsamplingMironov
 
 /-!
-# The last iterate at replace-one adjacency (Appendix D.2, Proposition D.4)
+# The last iterate at replace-one adjacency (Appendix E.2, Proposition E.4)
 
 * `ReplF`, `dropRec` — replace-one adjacency at record `j`, and the dataset with record `j`
   set to `⊥`, add/remove-adjacent to both sides of a replace pair;
@@ -12,7 +12,7 @@ import Xhl.Divergence.SubsamplingMironov
 * `liL_le_mironov` — the per-round level by Mironov et al. [Theorem 11];
 * `dpsgdLastIter_AT_addRemove` — at add/remove adjacency, level
   `(5/2)·β·q²C²/v · min{T, T̄}` with `T̄ = atTbar`;
-* `dpsgdLastIter_AT_replace` — **Proposition D.4**, by group privacy through `dropRec j`
+* `dpsgdLastIter_AT_replace` — **Proposition E.4**, by group privacy through `dropRec j`
   (`hellinger_group_le`) and Lemma 3.7.
 -/
 
@@ -206,7 +206,7 @@ end Full
 
 /-! ## The add/remove bound in Altschuler–Talwar's shape -/
 
-/-- The horizon `T̄ = max 1 ⌈Δ/(|γ|qC)⌉` of Proposition D.4. -/
+/-- The horizon `T̄ = max 1 ⌈Δ/(|γ|qC)⌉` of Proposition E.4. -/
 noncomputable def atTbar (N : ℕ) (η : ℝ) (q C : ℝ≥0) (Dm : ℝ) : ℕ :=
   max 1 ⌈Dm / (|γv N η q| * q * C)⌉₊
 
@@ -336,7 +336,7 @@ theorem dpsgdLastIter_AT_addRemove {β : ℝ} (hβ : 1 < β) {v : ℝ≥0}
     have := mul_le_mul_of_nonneg_left hL hRpos.le
     nlinarith [mul_nonneg (mul_nonneg hβ0 hX0) hRpos.le]
 
-/-- **Proposition D.4 (last iterate at replace-one adjacency)**: for `α ≥ 3/2`, `q ≤ 1/5`,
+/-- **Proposition E.4 (last iterate at replace-one adjacency)**: for `α ≥ 3/2`, `q ≤ 1/5`,
     `σ ≥ 4C` and Mironov et al.'s Theorem 11 conditions at `2α` and `2α − 1` (`hord`),
     `dpsgdLastIter` with noise variance `σ² + σ²` is `(α, 20·α·q²C²/σ² · min{T, T̄})`-RDP at
     `⋃ j, ReplF N dx j`.  The paper's hypotheses on the losses and `η` enter only through

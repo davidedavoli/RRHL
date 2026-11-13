@@ -5,7 +5,7 @@ import Xhl.Duality.Discrete.RenyiDualityGen
 /-!
 # Strong duality for the continuous Rényi lifting
 
-The core of Theorem C.1.  For sub-probability measures on Polish spaces and a closed relation with measurable
+The core of Theorem D.1.  For sub-probability measures on Polish spaces and a closed relation with measurable
 partner selectors, the witness-free lifting implies the two-witness one
 (`exists_witnesses_of_codLift`).
 

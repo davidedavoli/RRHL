@@ -3,7 +3,7 @@ import Xhl.Examples.DPFTRLBanded.Window
 open Continuous
 
 /-!
-# The window identity, in the equivalence calculus (Appendix D.5, Appendix E)
+# The window identity, in the equivalence calculus (Appendix E.5, Appendix C)
 
 `cequiv_windowT_windowS_rules`: a window of `L + 1 ≤ m + 1` rounds of `dpftrlBandedGen` is
 its presampled form `windowS` (the lazy-vs-eager identity behind (45)), as a `CEquiv`

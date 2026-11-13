@@ -3,11 +3,11 @@ import Xhl.Examples.DPFTRLBanded.DerivT
 open Continuous
 
 /-!
-# The cyclic schedule (Appendix D.5)
+# The cyclic schedule (Appendix E.5)
 
 As in Algorithm 2 of Choquette-Choo et al., the records are split into `m + 1` residue
 groups and round `t` samples only the group `t % (m+1)` (`eligCyc`, the test
-`i mod b = t mod b` of Fig. 8 at `b = m + 1`); within the group each record tosses its own
+`i mod b = t mod b` of Fig. 10 at `b = m + 1`); within the group each record tosses its own
 Poisson coin at rate `q`, where they draw a fixed-size batch.  The schedule is banded
 (`eligCyc_bandElig`) and allows at most `⌈T/(m+1)⌉` participations
 (`card_partRounds_eligCyc`), the truncated last window included.  So

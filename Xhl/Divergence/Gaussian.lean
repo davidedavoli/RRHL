@@ -6,7 +6,7 @@ import Xhl.Divergence.HellingerIntegral
 
   `hellingerIntegral α (𝒩 μ₁ v) (𝒩 μ₂ v) = exp(α(α-1)(μ₁-μ₂)²/(2v))`
 
-(Proposition A.25, item 1, in dimension one), from the density identity
+(Proposition A.24, item 1, in dimension one), from the density identity
 `pdf₁^α·pdf₂^{1-α} = exp(α(α-1)Δ²/2v)·pdf_{αμ₁+(1-α)μ₂}`.
 -/
 

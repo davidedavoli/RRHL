@@ -14,7 +14,7 @@ namespace DStd
 
 `flift_mul_iff_codLift_gen`: for discrete sub-distributions on arbitrary types `A`, `B`,
 under the partner conditions, the two-witness lifting `FLiftMul` coincides with the
-witness-free lifting `CodLiftMul`.  It is the discrete step of Theorem C.1
+witness-free lifting `CodLiftMul`.  It is the discrete step of Theorem D.1
 (`Xhl/Duality/DualityContStd.lean`).
 
 The proof approximates by finite subproblems indexed by pairs `(E, G)` of finite

@@ -1,7 +1,7 @@
 import Xhl.Examples.DPSGD.Shared.DerivLeaves
 
 /-!
-# The burning round of the last-iterate study (§5.1.3, Appendix D.2)
+# The burning round of the last-iterate study (§5.1.3, Appendix E.2)
 
 A burning round costs nothing and is derived on the block as written, without [Equiv]:
 

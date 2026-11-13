@@ -5,7 +5,7 @@ import Xhl.Divergence.SubsamplingMixBudget
 # Mironov, Talwar and Zhang's bound on the subsampled-Gaussian budget
 
 `mixBudgetR_le_mironov`: Theorem 11 of Mironov, Talwar, Zhang 2019 ("Rényi Differential Privacy
-of the Sampled Gaussian Mechanism", arXiv:1908.10530), at real order, used by Proposition D.4.
+of the Sampled Gaussian Mechanism", arXiv:1908.10530), at real order, used by Proposition E.4.
 The proof follows the source's Lemmas 8–10 as a pointwise domination of the integrand by moments
 of the likelihood ratio `t = gaussLR 0 s v`, split at `t = r₀ = 1 + 1/(q(α−1))`:
 

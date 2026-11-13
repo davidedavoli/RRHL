@@ -4,7 +4,7 @@ import Xhl.Examples.DPSGD.LastIterate.BurnRound
 import Xhl.Examples.Support.Clip
 
 /-!
-# The spending round of the last-iterate study (§5.1.3, Appendix D.2)
+# The spending round of the last-iterate study (§5.1.3, Appendix E.2)
 
 * `tderiv_splitSamp` — the split program of `Equiv/SplitLeaves.lean`, derived by
   [Samp] (batch), [Samp] (mixture, at `max(Υ, Λ)`) and [Samp-Gap] (noisy sum, spending `a`

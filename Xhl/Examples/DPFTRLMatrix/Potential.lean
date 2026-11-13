@@ -266,7 +266,7 @@ lemma shiftSq_le_sensSq {j : ℕ} {D : Fin T → EuclideanSpace ℝ (Fin d)}
     (sensSq_bddAbove j) ⟨D, hD⟩
 
 /-- **The triangle bound on the sensitivity**: `sens_j ≤ ∑_r gap_{j,r}²`, the bound that
-    Proposition D.5 evaluates. -/
+    Proposition E.5 evaluates. -/
 lemma sensSq_le_relGap (j : ℕ) : sensSq p j ≤ ∑ r, relGap p j r ^ 2 :=
   Real.iSup_le (fun D => shiftSq_le_relGap D.2) (Finset.sum_nonneg fun _ _ => sq_nonneg _)
 
@@ -393,7 +393,7 @@ theorem sensSq_eq_gram (hd : 0 < d) (hCl : 0 ≤ p.Cl)
 
 /-- **Multi-epoch participation, `0/1` on a pattern `P_j`**: when `CᵀC ≥ 0` entrywise,
     `sens_j = Γ²·‖∑_{t ∈ P_j} C_{·,t}‖²` (`patNormSq`), as used in the comparison with
-    Choquette-Choo et al. (Appendix D.4). -/
+    Choquette-Choo et al. (Appendix E.4). -/
 theorem sensSq_eq_patNormSq (hd : 0 < d) (hCl : 0 ≤ p.Cl)
     (hG : ∀ s s', 0 ≤ ∑ r, p.C r s * p.C r s') {j : ℕ} (pat : Finset (Fin T))
     (hpart : ∀ s : Fin T, p.part j s = if s ∈ pat then 1 else 0) :

@@ -5,7 +5,7 @@ import Xhl.Duality.Selection.AePartner
 open Continuous
 
 /-!
-# Witness-based validity and duality (Proposition 4.2, Appendix C)
+# Witness-based validity and duality (Proposition 4.2, Appendix D)
 
 `WRhl α P φ c₁ c₂ Q ψ` is the two-witness reading of a judgment: from every pair of
 states satisfying `P` there are two finite witnesses on `St M × St M`, both
@@ -14,7 +14,7 @@ concentrated on `Q`, whose first (resp. second) marginal is the semantics of `c�
 
 * `rrhl_of_wrhl` — **Proposition 4.2 (weak duality)**: witnesses give validity, for every
   post-weight `ψ`.
-* `wrhl_of_rrhl_polish`, `rrhl_iff_wrhl_polish` — **Theorem C.1 (strong duality)** at
+* `wrhl_of_rrhl_polish`, `rrhl_iff_wrhl_polish` — **Theorem D.1 (strong duality)** at
   post-weight `1`: on a Polish state space and for a closed postcondition, validity gives
   witnesses as soon as almost every final state of each program has a partner.  The
   partners are chosen measurably a.e. (`Xhl/Duality/Selection/AePartner.lean`).
@@ -57,7 +57,7 @@ section Strong
 variable [MetricSpace (St M)] [SecondCountableTopology (St M)] [BorelSpace (St M)]
   [CompleteSpace (St M)] [Nonempty (St M)]
 
-/-- **Theorem C.1 (strong duality)** at post-weight `1`: on a Polish state space and for a
+/-- **Theorem D.1 (strong duality)** at post-weight `1`: on a Polish state space and for a
     closed postcondition, validity implies witness-based validity as soon as almost every
     final state of each program has a partner in the postcondition. -/
 theorem wrhl_of_rrhl_polish {α : ℝ} (hα : 1 < α)
@@ -82,7 +82,7 @@ theorem wrhl_of_rrhl_polish {α : ℝ} (hα : 1 < α)
       f₁ hf₁ hq₁ f₂ hf₂ hq₂ hcod
   exact ⟨w₁, w₂, hw₁, hw₂, h1, h2, hQ₁', hQ₂', by rwa [weightedHellingerIntegral_one]⟩
 
-/-- **Theorem C.1**, both directions, under the hypotheses of `wrhl_of_rrhl_polish`. -/
+/-- **Theorem D.1**, both directions, under the hypotheses of `wrhl_of_rrhl_polish`. -/
 theorem rrhl_iff_wrhl_polish {α : ℝ} (hα : 1 < α)
     {P : St M × St M → Prop} {φ : St M × St M → ℝ≥0∞} {c₁ c₂ : Cmd ident M}
     {Q : St M × St M → Prop} 

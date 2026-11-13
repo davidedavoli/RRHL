@@ -2,11 +2,11 @@ import Mathlib.Probability.Kernel.Disintegration.StandardBorel
 import Xhl.Examples.DPFTRLBanded.GaussBlocks
 
 /-!
-# The [Samp-Dec] witnesses for a subsampled Gaussian (Appendix D.5)
+# The [Samp-Dec] witnesses for a subsampled Gaussian (Appendix E.5)
 
 Both runs draw `w ~ Bern(q) ⊗ 𝒩(0, σ²I)` (the draw (45)), and the postcondition asks for
 one run's noise to be the other's shifted by its coin times `Δ`.  For **[Samp-Dec]**
-(Fig. 9) the right value is drawn from a kernel `F` given the left one, and the witness
+(Fig. 11) the right value is drawn from a kernel `F` given the left one, and the witness
 `ν` satisfies `ν.bind F = Bern(q) ⊗ 𝒩(0, σ²I)`.  `sampFwdK_mix_witness` prices the
 left-coin orientation at the mixture `Υ_α`; `sampFwdK_flip_witness` the right-coin one at
 the reversed leaf `Λ_α`. -/

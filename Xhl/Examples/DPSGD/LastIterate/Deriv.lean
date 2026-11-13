@@ -4,14 +4,14 @@ import Xhl.Examples.DPSGD.Shared.LocalSupport
 import Xhl.Logic.Rrhl.Deriv
 
 /-!
-# DP-SGD in the last-iterate model (§5.1.3, Appendix D.2)
+# DP-SGD in the last-iterate model (§5.1.3, Appendix E.2)
 
 `dpsgdLastIter_deriv` derives judgment (8) for `dpsgdLastIter`, for each record `i` at
 symmetric adjacency and each `1 ≤ R ≤ T`: `T − R` burning rounds (`tderiv_bodyLocLI_burn`,
 no cost, distance kept below `Δ` by the projection) followed by `R` spending rounds
 (`tderiv_bodyLocLI_spend`, each closing `Δ/R` of the distance), then the final
 `release θ`.  The budget is `subDispBudgetSym^R`, which equals `subDispBudget^R` (the
-paper's `Ω_α(R)`, with `Δ` in place of `Δ_R`) by Lemma D.1.  `dpsgdLastIter_Hellinger`
+paper's `Ω_α(R)`, with `Δ` in place of `Δ_R`) by Lemma E.1.  `dpsgdLastIter_Hellinger`
 reads the bound off on the transcript law and minimizes over `R` outside the logic.
 -/
 
@@ -350,7 +350,7 @@ theorem tderiv_dpsgdLastIterLoc_AT {α : ℝ} (hα : 1 < α) {σ1 σ2 : ℝ≥0}
       (tderiv_initR d θ₀ (LInv N dx d i z 0) (fun _ => ∏ k ∈ Finset.range T, F k))
     exact LInv_initR N dx d i θ₀ z (hz0 ▸ hDm) s hs.1 hs.2
 
-/-- **Judgment (8) of §5.1.3**, at `R` spending rounds: adjacent datasets and equal
+/-- **Judgment (9) of §5.1.3**, at `R` spending rounds: adjacent datasets and equal
     transcripts to equal transcripts, at budget `subDispBudgetSym(…, Δ/R)^R`; the final
     `release θ` is free since the two models are equal. -/
 theorem dpsgdLastIter_deriv {α : ℝ} (hα : 1 < α) {σ1 σ2 : ℝ≥0} (hσ1 : σ1 ≠ 0)

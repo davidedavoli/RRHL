@@ -3,7 +3,7 @@ import Xhl.Examples.DPFTRLBanded.Cyclic
 open Continuous
 
 /-!
-# Amplified banded DP-FTRL on `PMem` (Appendix D.5)
+# Amplified banded DP-FTRL on `PMem` (Appendix E.5)
 
 `dpftrlBanded` is `dpftrlBandedGen` at the matrix study's fixed variables `tVarsP`, round
 counter `t` and coin `u`, on the dataset model of `DPSGD/Shared/Paper.lean`, with the
@@ -29,7 +29,7 @@ variable (N dx d T : ℕ) [NeZero T]
 /-- The coin. -/
 def uvBP : Vars String .bool := ⟨"u"⟩
 
-/-- **Amplified banded DP-FTRL on `PMem`** (Fig. 8): `dpftrlBandedGen` at the matrix study's
+/-- **Amplified banded DP-FTRL on `PMem`** (Fig. 10): `dpftrlBandedGen` at the matrix study's
     parameters and variables, with the cyclic eligibility `eligCyc m`. -/
 noncomputable def dpftrlBanded
     (hgrad : Measurable (fun p : EuclideanSpace ℝ (Fin dx) × EuclideanSpace ℝ (Fin d) =>
@@ -98,7 +98,7 @@ theorem dpftrlBanded_IndivRDP {α : ℝ} (hα : 1 < α)
     (uOKBP N dx d T) hq hσ hCl (eligCyc_bandElig m T) hband i m₁ m₂
     hadj
 
-/-- **The paper's uniform budget on `PMem`** (Appendix D.5): with every restricted column
+/-- **The paper's uniform budget on `PMem`** (Appendix E.5): with every restricted column
     norm at most `c`, `dpftrlBanded` is `(α, k·log Υ_α(q, Γ·c, σ²)/(α−1))`-individually RDP
     at `k = ⌈T/(m+1)⌉ = (T + m)/(m + 1)` (`card_partRounds_eligCyc`). -/
 theorem dpftrlBanded_uniform_IndivRDP {α : ℝ} (hα : 1 < α)

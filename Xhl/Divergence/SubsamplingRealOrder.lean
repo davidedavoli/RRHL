@@ -18,7 +18,7 @@ against `𝒩(μ₀,v)`, at every real `α > 1`:
    `(1−q)·ν₀ = q·ν₁`, and expanded below and above `z₁` as generalized binomial series whose
    terms are `exp(β(β−1)Δ²/2v) · 𝒩(μ₀+βΔ, v)(half-line)` (Mironov et al., §3.3);
 3. `hellingerIntegral_sgMixture_real_mono` — monotone in `|Δ|`, by a convex-order argument
-   (Proposition A.25, item 2).
+   (Proposition A.24, item 2).
 
 `SubsamplingRealOrderE.lean` lifts the result to the isotropic vector Gaussian.
 -/
@@ -1218,7 +1218,7 @@ lemma integral_mixturePow_gaussLR_eq_expShift {α : ℝ} (hα : 1 ≤ α) {q : �
   unfold gaussLR
   rw [← hg x]
 
-/-- **Monotonicity of the subsampled Gaussian in the sensitivity** `|Δ|` (Proposition A.25,
+/-- **Monotonicity of the subsampled Gaussian in the sensitivity** `|Δ|` (Proposition A.24,
 item 2). -/
 theorem hellingerIntegral_sgMixture_real_mono {α : ℝ} (hα : 1 < α) {μ₀ : ℝ} {v : ℝ≥0} (hv : v ≠ 0)
     {q : ℝ≥0} (hq1 : (q:ℝ) < 1) {Δ1 Δ2 : ℝ} (hΔ : |Δ1| ≤ |Δ2|) :

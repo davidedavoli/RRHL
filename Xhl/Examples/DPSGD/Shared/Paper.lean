@@ -9,7 +9,7 @@ import Xhl.Language.Semantics
 /-!
 # The DP-SGD model of Figure 1
 
-The concrete model the DP-SGD case studies (§5.1, Appendix D.1–D.2) run on: the memory
+The concrete model the DP-SGD case studies (§5.1, Appendix E.1–E.2) run on: the memory
 `PMem`, the program variables and their readers and frame lemmas, the expressions of
 Figure 1 (the clipped batch sum `clippedBatchSumD`, the model updates `modelUpdE` /
 `modelUpdProjE` with step size `γv`, the guard `guardE`), the Poisson loop `poissonSample`

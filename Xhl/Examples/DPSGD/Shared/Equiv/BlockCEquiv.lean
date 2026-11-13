@@ -5,7 +5,7 @@ import Xhl.Examples.DPSGD.Shared.LocalSupport
 # The DP-SGD sampling block, by the equivalence calculus
 
 `cequiv_blockLoc_fusedLoc`: the block of lines 4–7 of Figure 1 is equivalent to the single
-fused sampling `fusedLoc` (§5.1.1), as a `CEquiv` derivation (Appendix E).  The Poisson
+fused sampling `fusedLoc` (§5.1.1), as a `CEquiv` derivation (Appendix C).  The Poisson
 loop is unrolled by **[E-Count]** and its `N + 1` iterations are merged into one batch
 draw (`poissonBatchKernel`); the clipped sum is then pushed into the Gaussian's mean and
 the batch draw merged with the Gaussian (**[E-Merge]**).

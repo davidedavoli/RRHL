@@ -5,7 +5,7 @@
       𝒩(m, v)(z, ∞)  = ½·erfc((z − m)/√(2v))      (`gaussianReal_real_Ioi`)
 
   used to turn `mixBudgetR_eq_phiForm` into the erfc form evaluated by deployed
-  accountants (`mixBudgetR_eq_erfcForm`, Proposition D.2).
+  accountants (`mixBudgetR_eq_erfcForm`, Proposition E.2).
 -/
 import Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral
 import Mathlib.Probability.Distributions.Gaussian.Real

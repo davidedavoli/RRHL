@@ -4,7 +4,7 @@ import Xhl.Logic.Rrhl.DerivedRules
 open Continuous
 
 /-!
-# DP-FTRL with a matrix mechanism: the derivation (§5.3, Appendix D.4)
+# DP-FTRL with a matrix mechanism: the derivation (§5.3, Appendix E.4)
 
 `dpftrl_gen_deriv` derives judgment (13) for `dpftrlGen` in `TDeriv`: **[Assn]** for the
 assignments, the counted loop `tderiv_while_count` for both loops (premise (14) is
@@ -15,7 +15,7 @@ cost of its actual shift.
 
 Everything else is read out of this one derivation in the metalogic: the transcript bound
 `dpftrl_gen_Hellinger`, individual RDP at `α·sens_j/2σ²` (`dpftrl_gen_IndivRDP`), and the
-comparisons of Appendix D.4 (`dpftrl_gen_denisov_RDP`, `dpftrl_gen_tree_RDP`,
+comparisons of Appendix E.4 (`dpftrl_gen_denisov_RDP`, `dpftrl_gen_tree_RDP`,
 `dpftrl_gen_multiEpoch_IndivRDP`, `dpftrl_gen_multiEpoch_RDP`).  `dpftrl_IndivRDP` is the
 result on the quoted program `dpftrl`.
 -/
@@ -489,7 +489,7 @@ theorem dpftrl_gen_IndivRDP_of_le {α : ℝ} (hα : 1 < α) (hok : TOK p v)
 
 /-- **Single participation** (comparison with Denisov et al., Theorem 4.1): if every record
     `j` takes part in round `s₀ j` alone, DP-FTRL is `(α, α·Γ²·max_s ‖C_{·,s}‖²/2σ²)`-RDP, for
-    any encoder.  By Proposition D.5 (1) and Lemma 3.7. -/
+    any encoder.  By Proposition E.5 (1) and Lemma 3.7. -/
 theorem dpftrl_gen_denisov_RDP {α : ℝ} (hα : 1 < α) (hok : TOK p v)
     (hc : MCntOK v tv rv) (hσ : p.σ2 ≠ 0) (hC : 0 ≤ p.Cl) (s₀ : ℕ → Fin T)
     (hpart : ∀ j, j < n → ∀ s : Fin T, p.part j s = if s = s₀ j then 1 else 0) :

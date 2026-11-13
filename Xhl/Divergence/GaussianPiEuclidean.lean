@@ -18,7 +18,7 @@ transported along `MeasurableEquiv.toLp` (Definition A.22).
 
 * `gaussE_measurable` — measurable in the mean; `gaussE_noise` — translate of the centred one;
 * `gaussE_leaf` — `hellingerIntegral α (gaussE a σ²) (gaussE b σ²) ≤ exp(α(α−1)‖a − b‖²/2σ²)`
-  (Proposition A.25, item 1); `gaussE_ac` — mutual absolute continuity;
+  (Proposition A.24, item 1); `gaussE_ac` — mutual absolute continuity;
 * `gaussE_conv`, `gaussE_split_shift` — convolution of Gaussians adds variances
   (Proposition A.23, item 2), in product and bind form.
 -/

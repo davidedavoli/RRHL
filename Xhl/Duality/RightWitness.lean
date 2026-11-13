@@ -6,7 +6,7 @@ import Mathlib.Probability.Kernel.Disintegration.StandardBorel
 /-!
 # The right witness from a single measure (reduced form of the lifting)
 
-Used by the strong duality theorem (Theorem C.1).  The two-witness lifting is
+Used by the strong duality theorem (Theorem D.1).  The two-witness lifting is
 determined by its left witness alone: if a finite measure `w` on `A × B` has left
 marginal `μ₁`, is supported on `R`, and its right marginal `ν` satisfies
 `hellingerIntegral α ν μ₂ ≤ η`, then a right witness exists completing it to a

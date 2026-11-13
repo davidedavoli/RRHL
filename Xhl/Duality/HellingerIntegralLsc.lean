@@ -13,7 +13,7 @@ import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
 For a finite Borel measure `μ₂` on a (pseudo)metric space, the map
 `ν ↦ hellingerIntegral α ν μ₂` on finite measures is lower semicontinuous for the weak
 topology (`hellingerIntegral_lsc`).  It carries the budget of approximate witnesses to
-their limit in the strong duality theorem (Theorem C.1).
+their limit in the strong duality theorem (Theorem D.1).
 
 The proof uses one bounded continuous test per point, not a supremum.
 

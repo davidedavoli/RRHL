@@ -4,11 +4,11 @@ import Xhl.Examples.DPSGD.Shared.LocalSupport
 import Xhl.Logic.Rrhl.Deriv
 
 /-!
-# DP-SGD in the transcript model (§5.1.1, Appendix D.1)
+# DP-SGD in the transcript model (§5.1.1, Appendix E.1)
 
 `dpsgdTranscript_deriv` derives the judgment of §5.1.1 for `dpsgdTranscript`, for each
 record `i`, at symmetric adjacency `AdjAtSym (recBotN N dx) i`, with postcondition
-`τ⟨1⟩ = τ⟨2⟩` and budget `max(Υ, Λ)^T`, which equals `Υ^T` by Lemma D.1
+`τ⟨1⟩ = τ⟨2⟩` and budget `max(Υ, Λ)^T`, which equals `Υ^T` by Lemma E.1
 (`max_mixBudgetR_mixFlipBudgetE`).  `dpsgdTranscript_Hellinger` reads
 the bound off on the law of the transcript.  The RDP and `(ε,δ)` corollaries are in
 `Transcript/DP.lean`.

@@ -5,7 +5,7 @@ open Continuous
 /-!
 # Validity of the sampling rules and of [Scale]
 
-* `rrhl_rnd_fwdK_ae` — **[Samp-Dec]** (Figure 9): the right sampler decomposes as
+* `rrhl_rnd_fwdK_ae` — **[Samp-Dec]** (Figure 11): the right sampler decomposes as
   `dlet v ← ν in F v` with `F` Markov; postcondition asked almost everywhere.
   `rrhl_rnd_fwdK` is the everywhere instance.
 * `rrhl_rnd` — **[Samp]**: the instance at the identity kernel.
@@ -24,7 +24,7 @@ def updPair {t₁ t₂ : Ty} (x₁ : Vars ident t₁) (x₂ : Vars ident t₂) (
     (v : t₁.interp × t₂.interp) : St M × St M :=
   ((M.set s.1.1 t₁ x₁.name v.1, s.1.2), (M.set s.2.1 t₂ x₂.name v.2, s.2.2))
 
-/-- **[Samp-Dec]** (Figure 9): if `ν.bind F = κ₂` with `F` Markov, the postcondition holds
+/-- **[Samp-Dec]** (Figure 11): if `ν.bind F = κ₂` with `F` Markov, the postcondition holds
     for `ν`-a.e. `v` and `F v`-a.e. `w`, and the weighted Hellinger integral of `κ₁`
     against `ν`, with the weight averaged under `F`, is at most `φ`, the sampling
     judgment is valid. -/

@@ -6,7 +6,7 @@ open Continuous
 /-!
 # The window of `dpftrlBandedGen` as a derivation, statement by statement
 
-The body of the block judgment (57) of Appendix D.5, at budget `1` with the draw `w` in
+The body of the block judgment (57) of Appendix E.5, at budget `1` with the draw `w` in
 the state, by [Assn], [If], [Samp] with equal coins, [Local], [Seq], [While] and [Conseq].
 
 * the record step adds to the history slot, so the noise relation `NR` must survive an
